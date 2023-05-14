@@ -1,0 +1,168 @@
+.calculator {
+    height: 390px;
+    width: 92%;
+    max-width: 350px;
+    min-width: 240px;
+    background-color: rgb(4 43 174);
+    box-shadow: 3px 2px 5px 3px  rgb(7, 17, 73);
+    border-right: 2px solid rgb(11 27 81);
+    border-bottom: 4px solid rgb(5 16 53);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.content {
+    width: calc(100% - 40px);
+    min-height: 50px;
+    background-color: aliceblue;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 14px 8px;
+    overflow: auto;
+}
+
+.content .result {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
+
+.content::-webkit-scrollbar  {
+    height: 6px;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar {
+    background: #757981;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #0d2069ea;    
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+.buttons button {
+    width: 20%;
+    height: 40px;
+    margin: 10px 5px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(45 81 201);
+    border-right: 4px solid rgb(6 27 136);
+    border-bottom: 5px solid rgb(7, 17, 73);
+    font-size: 15px;
+    font-weight: 700;
+    color: whitesmoke;
+}
+
+.buttons button#delete {
+    background-color: rgb(192 37 37);
+    border-right: 4px solid rgba(70, 20, 7, 0.952);
+    border-bottom: 5px solid rgba(41, 11, 4, 0.952);
+}
+
+.buttons button#calculate {
+    background-color: rgb(216, 123, 37);
+    border-right: 4px solid rgba(48, 28, 10, 0.884);
+    border-bottom: 5px solid rgba(34, 19, 5, 0.904);
+}
+
+.buttons button.click {
+    animation: click-button .2s linear forwards;
+}
+
+.buttons button.remove-click {
+    animation: remove-click-button .2s linear forwards;
+}
+
+.buttons button#btn-delete.click {
+    animation: click-button-delete .2s linear forwards;
+}
+
+.buttons button#btn-delete.remove-click {
+    animation: remove-click-button-delete .2s linear forwards;
+}
+
+.buttons button#btn-calculate.click {
+    animation: click-button-calculate .2s linear forwards;
+}
+
+.buttons button#btn-calculate.remove-click {
+    animation: remove-click-button-calculate .2s linear forwards;
+}
+
+
+@keyframes click-button {
+    to {
+        background-color: rgba(15, 34, 87, 0.678);
+        border-bottom: 1px solid rgb(7, 17, 73);
+        border-right: 1px solid rgb(7, 17, 73);
+    }
+}
+
+@keyframes remove-click-button {
+    from {
+        background-color: rgba(15, 34, 87, 0.678);
+        border-bottom: 1px solid rgb(7, 17, 73);
+        border-right: 1px solid rgb(7, 17, 73);
+    }
+    to {
+        background-color: rgb(45 81 201);
+        border-right: 4px solid rgb(6 27 136);
+        border-bottom: 5px solid rgb(7, 17, 73);
+    }
+}
+
+@keyframes click-button-delete {
+    to {
+        background-color: rgb(109, 19, 19);
+        border-right: 1px solid rgba(41, 11, 4, 0.952);
+        border-bottom: 1px solid rgba(41, 11, 4, 0.952);
+    }
+}
+
+@keyframes remove-click-button-delete {
+    from {
+        background-color: rgb(109, 19, 19);
+        border-right: 1px solid rgba(41, 11, 4, 0.952);
+        border-bottom: 1px solid rgba(41, 11, 4, 0.952);
+    }
+    to {
+        background-color: rgb(192 37 37);
+        border-right: 4px solid rgba(70, 20, 7, 0.952);
+        border-bottom: 5px solid rgba(41, 11, 4, 0.952);
+    }
+}
+
+@keyframes click-button-calculate {
+    to {
+        background-color: rgba(153, 89, 29, 0.952);
+        border-bottom: 1px solid rgba(34, 19, 5, 0.904);
+        border-right: 1px solid rgba(34, 19, 5, 0.904);
+    }
+}
+
+@keyframes remove-click-button-calculate {
+    from {
+        background-color: rgba(153, 89, 29, 0.952);
+        border-bottom: 1px solid rgba(34, 19, 5, 0.904);
+        border-right: 1px solid rgba(34, 19, 5, 0.904);
+    }
+    to {
+        background-color: rgb(216, 123, 37);
+        border-right: 4px solid rgba(48, 28, 10, 0.884);
+        border-bottom: 5px solid rgba(34, 19, 5, 0.904);
+    }
+}

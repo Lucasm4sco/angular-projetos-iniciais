@@ -1,0 +1,36 @@
+<div class="calculator">
+    <div class="content">
+        <p class="result"> {{ display }} </p>
+    </div>
+    <div class="buttons">
+        <button id="btn-7" (click)="adicionarNumero('7')">7</button>
+        <button id="btn-8" (click)="adicionarNumero('8')">8</button>
+        <button id="btn-9" (click)="adicionarNumero('9')">9</button>
+        <button id="btn-plus" (click)="definirOperacao('+')">+</button>
+        <button id="btn-4" (click)="adicionarNumero('4')">4</button>
+        <button id="btn-5" (click)="adicionarNumero('5')">5</button>
+        <button id="btn-6" (click)="adicionarNumero('6')">6</button>
+        <button id="btn-subtract" (click)="definirOperacao('-')">-</button>
+        <button id="btn-1" (click)="adicionarNumero('1')">1</button>
+        <button id="btn-2" (click)="adicionarNumero('2')">2</button>
+        <button id="btn-3" (click)="adicionarNumero('3')">3</button>
+        <button id="btn-multiply" (click)="definirOperacao('*')">*</button>     
+        <button id="btn-0" (click)="adicionarNumero('0')">0</button>
+        <button id="btn-point" (click)="adicionarNumero('.')">.</button>
+        <button id="btn-delete" (click)="limpar()">CE</button>
+        <button id="btn-calculate" (click)="calcular()">=</button>
+    </div>
+</div>
+
+<!-- <script defer>
+    function clickAll() {
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.add('click')
+                setTimeout(() => button.classList.remove('click'), 200)
+            })
+        })
+    }
+    clickAll()
+</script> -->
