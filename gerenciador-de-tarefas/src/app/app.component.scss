@@ -1,0 +1,43 @@
+$bg-header: rgba(253, 253, 253, 0.596);
+$border-header: 1px solid rgba(128, 128, 128, 0.884);
+
+$title-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$title-color: rgba(20, 20, 20, 0.863);
+$title-size: 1.5em;
+
+.header {
+    background-color: $bg-header;
+    border: $border-header;
+    padding: 20px;
+    border-radius: 0px 0 10px 10px;
+
+    h1 {
+        font-family: $title-font;
+        color: $title-color;
+        font-size: $title-size;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+}
+
+.limit-content {
+    padding: 10px;
+    max-width: 900px;
+    margin:  10vh auto 0;
+}
+
+
+@media screen and (max-width: 350px){
+    .header { 
+        padding: 10px;
+
+        h1 {
+            font-size: 1.3em;
+        }
+    }
+
+    .limit-content {
+        padding: 0px;
+    }
+}

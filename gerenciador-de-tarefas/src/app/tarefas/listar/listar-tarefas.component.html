@@ -1,0 +1,25 @@
+<a [routerLink]="['/tarefas/cadastrar']" class="link-route">Nova Tarefa</a>
+
+<h2>Lista de tarefas:</h2>
+
+<div class="task" *ngFor="let tarefa of tarefas">
+    <input type="checkbox" [id]="tarefa.id" [checked]="tarefa.concluida" [value]="tarefa.id" (click)="alterar(tarefa)" />
+    <label [for]="tarefa.id" class="check-task">
+        <svg [cIcon]="icons.cilCheckAlt" width="16" title="List Icon" fill="white"></svg>
+    </label>
+    <p class="name-task">
+        {{ tarefa.nome }}
+    </p>
+    <div class="handle-task">
+        <a [routerLink]="['/tarefas/editar', tarefa.id]" class="edit-task">
+            Editar
+            <svg [cIcon]="icons.cilPen" width="17" title="List Icon"></svg>
+        </a>
+        <a href="#" class="remove-task" (click)="remover($event,  tarefa)">
+            Excluir
+            <svg [cIcon]="icons.cilTrash" width="17" title="List Icon"></svg>
+        </a>
+    </div>
+</div>
+
+<p class="without-task" *ngIf="tarefas.length === 0">Nenhuma tarefa cadastrada ainda.</p>

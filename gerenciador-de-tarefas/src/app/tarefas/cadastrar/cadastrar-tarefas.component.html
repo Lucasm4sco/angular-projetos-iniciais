@@ -1,0 +1,20 @@
+<a [routerLink]="['/tarefas/listar']" class="link-route">Cancelar</a>
+
+<h2>Adicionando nova tarefa: </h2>
+
+<form class="task-form" #formTarefa="ngForm" (submit)="cadastrar()">
+    <input type="text" placeholder="Digite sua tarefa..." minlength="5" name="nome" id="nome" [(ngModel)]="tarefa.nome"
+        #nome="ngModel" required />
+    <button type="submit" [disabled]="!formTarefa.form.valid">
+        +
+    </button>
+</form>
+
+<div *ngIf="nome.errors">
+    <p [hidden]="!nome.errors.required" class="message-info">
+        Exemplo de tarefa: Estudar às 10:00 horas.
+    </p>
+    <p [hidden]="!nome.errors.minlength" class="message-info error">
+        A tarefa deve conter pelo menos 5 caracteres.
+    </p>
+</div>

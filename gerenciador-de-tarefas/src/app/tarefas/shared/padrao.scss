@@ -1,0 +1,22 @@
+$color-link: rgb(100 112 169);
+$color-hover-link: rgb(33, 44, 99);
+$color-subtitle: whitesmoke;
+
+.link-route {
+    padding: 10px;
+    background-color: $color-link;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+.link-route:hover {
+    background-color: $color-hover-link;
+}
+
+h2 {
+    color: $color-subtitle;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 40px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

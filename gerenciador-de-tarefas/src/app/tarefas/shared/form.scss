@@ -1,0 +1,40 @@
+$bg-button: rgb(8, 94, 223);
+$bg-hover-button: rgb(9, 47, 104);
+$color-button: white;
+$color-message-info: gainsboro;
+
+.task-form {
+    display: flex;
+    gap: 1%;
+    width: 100%;
+
+    input {
+        width: 91%;
+        padding: 10px;
+        font-size: 1.2em;
+        border-radius: 3px;
+    }
+
+    button {
+        background-color: $bg-button;
+        color: $color-button;
+        font-weight: 600;
+        padding: 6px 4%;
+        flex-grow: 1;
+        font-size: 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all .2s ease; 
+    }
+
+    button:hover {
+        background-color: $bg-hover-button;
+    }
+}
+
+.message-info {
+    padding: 10px;
+    color: $color-message-info;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8em;
+}
